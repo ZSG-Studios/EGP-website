@@ -36,8 +36,10 @@ for the documented scope.
 
 Windows C#/C++ fixtures also cover repeated local session recovery and trusted
 Box3D checkpoint restoration. The editor and relocated Debug/Release runs each
-pass 93 interoperability assertions. See [language testing]({{ site.docs_url }}/egp/language_testing.html)
-for the exact scope; client reconnect and hot reload during these faults still
-require separate qualification.
+pass 133 interoperability assertions, including explicit same-process client
+reset/rejoin with fresh admission and restored physics replication. See
+[language testing]({{ site.docs_url }}/egp/language_testing.html) for the exact
+scope; automatic recovery, independent-process server stalls and hot reload
+during faults still require separate qualification.
 
 </div>
