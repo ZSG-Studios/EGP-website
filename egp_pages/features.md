@@ -64,4 +64,12 @@ codec; C++ and C# verify the same native body state. This covers one local Windo
 Debug pair and one body. Automatic client rollback, larger worlds and production
 checkpoint policy require separate qualification.
 
+The public C# low-level session API now supports [explicit reload handoff]({{ site.docs_url }}/egp/hot_reload.html#c-session-ownership-and-events)
+through `DetachForReload()` and `ResumeAfterReload(Dictionary)`. Applications
+transfer a local capsule in serialization hooks and resubscribe their event
+handlers. Live and stopped reload fixtures verify ownership, invalid/copied
+claims and constant native signal connection counts. Fresh editor/Debug/Release
+language runs validate the updated helpers. High-level wrapper ownership and
+arbitrary captured closures require separate qualification.
+
 </div>
