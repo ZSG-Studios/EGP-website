@@ -70,7 +70,7 @@ transfer a local capsule in serialization hooks and resubscribe their event
 handlers. Live and stopped reload fixtures verify ownership, invalid/copied
 claims and constant native signal connection counts. Fresh editor/Debug/Release
 language runs validate the updated helpers. This capsule transfers low-level
-ownership; high-level C++/physics adapter ownership and
+ownership; high-level C++ adapter ownership and
 arbitrary captured closures require separate qualification.
 
 High-level C# [NetNode reload]({{ site.docs_url }}/egp/hot_reload.html#high-level-c-node-reload)
@@ -90,5 +90,15 @@ options before new host/join, and keep saved handles tied to their issuing nativ
 session; numeric IDs can repeat in a new session. Local stale-signal injection is
 a lifetime test; remote-attack and WAN behavior require separate qualification.
 Arbitrary in-flight mutation and performance remain open.
+
+The public C# [Box3D adapter reload API]({{ site.docs_url }}/egp/hot_reload.html#c-box3d-adapter-ownership)
+transfers the existing adapter, world and stable body mapping through a local
+capsule. Applications resubscribe events after resume. Fresh live/stopped fixtures
+verify exact callback counts, 22 ownership checks each, tree reentry and three
+fresh-session cycles with resumed client physics. Commands defer until the active
+poll/tick returns; arbitrary callback mutation remains unqualified. Fresh
+editor/Debug/Release language builds and low-level/default runtime regressions
+pass. High-level C++ adapter ownership, authenticated-node repair failures and
+concurrent/exported-runtime reload remain open.
 
 </div>
