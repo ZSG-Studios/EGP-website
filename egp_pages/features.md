@@ -55,4 +55,13 @@ with both outbound simulators configured for 30 ms latency, 5 ms jitter and
 in-flight/concurrent reload, managed facade/event closure persistence and
 exported-runtime reload require separate qualification.
 
+The optional [physics reload gate]({{ site.docs_url }}/egp/hot_reload.html#native-physics-state-during-reload)
+also retains one explicit Box3D world and stable body through live C#/C++ reload.
+After a clock fault, it preserves the stopped world, rejects damaged snapshots
+without changing state and explicitly restores a trusted local checkpoint before
+fresh admission resumes physics. GDScript drives the fixture clock and baseline
+codec; C++ and C# verify the same native body state. This covers one local Windows
+Debug pair and one body. Automatic client rollback, larger worlds and production
+checkpoint policy require separate qualification.
+
 </div>
