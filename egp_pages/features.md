@@ -79,8 +79,8 @@ transfer a local capsule in serialization hooks and resubscribe their event
 handlers. Live and stopped reload fixtures verify ownership, invalid/copied
 claims and constant native signal connection counts. Fresh editor/Debug/Release
 language runs validate the updated helpers. This capsule transfers low-level
-ownership; high-level C++ adapter ownership and
-arbitrary captured closures require separate qualification.
+ownership. C++ has a separate explicit handoff contract below; arbitrary captured
+closures require separate qualification.
 
 High-level C# [NetNode reload]({{ site.docs_url }}/egp/hot_reload.html#high-level-c-node-reload)
 now preserves forwarding on the same codec child during serialization. Owners
@@ -107,7 +107,17 @@ verify exact callback counts, 22 ownership checks each, tree reentry and three
 fresh-session cycles with resumed client physics. Commands defer until the active
 poll/tick returns; arbitrary callback mutation remains unqualified. Fresh
 editor/Debug/Release language builds and low-level/default runtime regressions
-pass. High-level C++ adapter ownership, authenticated-node repair failures and
+pass. Automatic C++ ownership transfer, authenticated-node repair failures and
 concurrent/exported-runtime reload remain open.
+
+C++ [network and Box3D ownership handoff]({{ site.docs_url }}/egp/hot_reload.html#c-network-and-box3d-ownership)
+uses `detach_for_reload()` and `resume_after_reload()` with local, single-use
+capsules stored in extension-node properties. Applications pause manual polling
+at a safe boundary, transfer their owners and resubscribe callbacks after reload.
+Two actual compatible Debug DLL reloads retain native sessions, adapter/world
+identities and body mapping, with 60 capsule checks and 138 runtime assertions.
+Fresh editor/Debug/Release language regressions also pass. Automatic/in-flight
+transfer, failed-library ownership recovery and exported-game reload require
+separate qualification.
 
 </div>
