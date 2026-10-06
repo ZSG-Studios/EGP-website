@@ -1,0 +1,49 @@
+# EGP is the active site. Upstream editorial, release and download content remains
+# in Git history/source for maintenance but is excluded from the public build.
+title: EGP
+description: "A Godot Engine fork with Box2D, Box3D, Yojimbo and built-in C++ tools."
+url: "https://zsg-studios.github.io"
+baseurl: "/EGP-website"
+docs_url: "https://zsg-studios.github.io/EGP-docs"
+engine_url: "https://github.com/ZSG-Studios/EGP"
+plugins_dir: egp_plugins
+data_dir: egp_data
+collections: {}
+pagination:
+  enabled: false
+include: ["egp_pages"]
+exclude:
+  - .github
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - build.sh
+  - build-and-serve.sh
+  - build-and-watch.sh
+  - pages
+  - collections
+  - storage
+  - misc
+  - well-known
+  - versions.json
+  - _i18n
+  - _plugins
+  - egp_plugins
+  - egp_data
+  - _build
+  - tools
+  - assets/community
+  - assets/download
+  - assets/features
+  - assets/home
+  - assets/press
+  - assets/showcase
+  - assets/css/releases
+  - assets/css/priorities
+  - assets/css/features.scss
+  - assets/css/home.scss
+  - assets/css/release.scss
+  - favicon.ico
+  - LICENSE.txt
+sass:
+  style: compressed

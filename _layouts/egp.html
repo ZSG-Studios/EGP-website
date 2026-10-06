@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="ZSG-Studios">
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:site_name" content="EGP">
+  <meta property="og:title" content="{{ page.title | escape }} — EGP">
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta name="theme-color" content="#333f67">
+  <title>{{ page.title | escape }} — EGP</title>
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/egp-mark.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/egp.css' | relative_url }}">
+  <link rel="preload" as="font" href="{{ '/assets/fonts/Montserrat-VariableFont_wght.woff2' | relative_url }}" crossorigin>
+</head>
+<body>
+  <a class="egp-skip" href="#main">Skip to content</a>
+  <input type="checkbox" id="nav_toggle_cb">
+  <header class="flex column">
+    <div class="container flex align-center">
+      <div id="nav_head">
+        <a href="{{ '/' | relative_url }}" id="logo-link" class="egp-wordmark" aria-label="EGP home">
+          <img src="{{ '/assets/egp-mark.svg' | relative_url }}" width="38" height="38" alt=""><span>EGP</span>
+        </a>
+        <div class="mobile-links"><label for="nav_toggle_cb" id="nav_toggle_btn" aria-label="Toggle navigation"><img src="{{ '/assets/icons/hamburger.svg' | relative_url }}" width="24" height="24" alt="Menu"></label></div>
+      </div>
+      <nav id="nav" aria-label="Main navigation">
+        <ul class="left">
+          <li><a href="{{ '/features/' | relative_url }}" {% if page.url == '/features/' %}aria-current="page"{% endif %}>Features</a></li>
+          <li><a href="{{ '/download/' | relative_url }}" {% if page.url == '/download/' %}aria-current="page"{% endif %}>Build &amp; download</a></li>
+          <li><a href="{{ '/community/' | relative_url }}" {% if page.url == '/community/' %}aria-current="page"{% endif %}>Contribute</a></li>
+        </ul>
+        <ul class="right">
+          <li><a href="{{ site.docs_url }}/">Documentation</a></li>
+          <li><a href="{{ site.engine_url }}">Source code</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">{{ content }}</main>
+  <footer class="footer-global">
+    <div class="wrapper">
+      <div class="columns">
+        <div class="col"><h2>EGP</h2><ul><li><a href="{{ '/features/' | relative_url }}">Features</a></li><li><a href="{{ '/download/' | relative_url }}">Build &amp; download</a></li><li><a href="{{ site.docs_url }}/egp/qualification.html">Support &amp; qualification</a></li></ul></div>
+        <div class="col"><h2>Documentation</h2><ul><li><a href="{{ site.docs_url }}/egp/getting_started.html">Getting started</a></li><li><a href="{{ site.docs_url }}/egp/migration.html">Migration guide</a></li><li><a href="{{ site.docs_url }}/classes/index.html">Class reference</a></li></ul></div>
+        <div class="col"><h2>Project</h2><ul><li><a href="{{ site.engine_url }}">Engine source</a></li><li><a href="{{ site.engine_url }}/issues">Report an issue</a></li><li><a href="{{ '/license/' | relative_url }}">Licenses &amp; attribution</a></li></ul></div>
+        <div class="col"><h2>Upstream</h2><ul><li><a href="https://godotengine.org/">Godot Engine</a></li><li><a href="https://github.com/godotengine/godot-website">Website source</a></li><li><a href="https://docs.godotengine.org/">Godot documentation</a></li></ul></div>
+      </div>
+      <hr>
+      <div class="credits-and-socials"><p>EGP is maintained by ZSG-Studios. Built on Godot Engine.<br>Website styles © 2017–{{ site.time | date: '%Y' }} Godot Engine contributors, MIT licensed.</p></div>
+    </div>
+  </footer>
+</body>
+</html>

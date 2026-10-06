@@ -1,20 +1,10 @@
 source 'https://rubygems.org'
 
+# EGP uses the upstream Jekyll/Sass pipeline and shared theme assets.
+# Godot-only download, localization and editorial plugins remain in source
+# but are not loaded by the EGP config.
 gem 'jekyll', '4.4.1'
-gem 'jekyll-watch'
-gem 'jekyll-paginate-v2'
-gem 'jekyll-redirect-from'
-
 gem 'webrick', '~> 1.8'
-
-# Required on Ruby 3.4 and later as these are no longer part of the standard library.
 gem 'csv'
 gem 'base64'
-gem 'bigdecimal'
-
-gem "logger", "~> 1.7"
-
-gem 'ruby-magic', '~> 0.6.0'
-
-
-gem "rdoc", "~> 7.2"
+gem 'logger', '~> 1.7'

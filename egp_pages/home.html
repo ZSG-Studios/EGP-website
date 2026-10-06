@@ -1,0 +1,46 @@
+---
+layout: egp
+permalink: /
+title: A familiar engine. New foundations.
+description: "EGP brings Box2D, Box3D, Yojimbo networking and built-in C++ extension tools to Godot's editor and scene workflow."
+---
+<section class="egp-hero">
+  <div class="wrapper">
+    <div>
+      <div class="egp-eyebrow">Open source · Built on Godot</div>
+      <h1>A familiar engine.<br>New foundations.</h1>
+      <p>EGP brings Box2D and Box3D physics, Yojimbo networking, and built-in C++ tools to the Godot editor and scene workflow.</p>
+      <div class="egp-actions"><a class="egp-primary" href="{{ site.docs_url }}/egp/getting_started.html">Get started</a><a class="egp-secondary" href="{{ site.engine_url }}">Explore the source</a></div>
+    </div>
+    <div class="egp-code" aria-label="Example of explicit fixed-tick Box3D simulation">
+      <div class="egp-code-label">Explicit physics · GDScript</div>
+      <pre><code>var world := EGPBox3DWorld.new()
+var error := world.configure(60, 4, 1)
+if error == OK:
+    error = world.queue_create_sphere(
+        1, 0, Vector3(0, 3, 0), 0.5)
+if error == OK:
+    error = world.step_tick(1)
+if error != OK:
+    push_error(error_string(error))</code></pre>
+    </div>
+  </div>
+</section>
+<section class="egp-section"><div class="wrapper">
+  <h2>Tools that fit your game.</h2>
+  <p class="egp-lead">Use familiar scene nodes, choose GDScript, C# or C++, and work with explicit contracts for simulation, replication and native development.</p>
+  <div class="egp-cards">
+    <article class="egp-card"><span class="egp-number">01 / PHYSICS</span><h3>Box2D &amp; Box3D</h3><p>Native 2D and 3D backends behind the scene APIs, plus independent Box3D worlds with fixed ticks, ordered commands and local snapshots.</p><a href="{{ site.docs_url }}/egp/box3d.html">Explore physics →</a></article>
+    <article class="egp-card"><span class="egp-number">02 / NETWORKING</span><h3>Yojimbo transport</h3><p>Encrypted admission, server-authoritative entities, connection ownership and bounded prediction helpers with a shared codec across languages.</p><a href="{{ site.docs_url }}/egp/networking.html">Explore networking →</a></article>
+    <article class="egp-card"><span class="egp-number">03 / DEVELOPMENT</span><h3>C++ in the editor</h3><p>Scaffold and build extensions, follow compiler diagnostics, and use an embedded SDK generated from the editor's own API.</p><a href="{{ site.docs_url }}/egp/cpp_extensions.html">Explore C++ tools →</a></article>
+  </div>
+</div></section>
+<section class="egp-section egp-band"><div class="wrapper">
+  <h2>Build with a clear contract.</h2>
+  <p class="egp-lead">EGP follows Godot's development branch. Its documentation explains changed APIs, supported configurations and the qualification work that remains.</p>
+  <div class="egp-cards">
+    <article><h3>Coming from Godot?</h3><p>Review physics differences and replace scene multiplayer with explicit messages and authoritative entities.</p><a class="egp-footer-link" href="{{ site.docs_url }}/egp/migration.html">Read the migration guide →</a></article>
+    <article><h3>Looking for an API?</h3><p>Browse the class reference generated from EGP, with the current methods, signals, defaults and error contracts.</p><a class="egp-footer-link" href="{{ site.docs_url }}/classes/index.html">Browse the reference →</a></article>
+    <article><h3>Evaluating the fork?</h3><p>Check the tested scope, remaining parity work and platform requirements before adopting a system.</p><a class="egp-footer-link" href="{{ site.docs_url }}/egp/qualification.html">Review qualification →</a></article>
+  </div>
+</div></section>
