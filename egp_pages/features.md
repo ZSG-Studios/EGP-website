@@ -43,7 +43,13 @@ restored physics replication. Low-level checks cover retired handles and exact
 raw payload delivery. See
 [language testing]({{ site.docs_url }}/egp/language_testing.html) for the exact
 scope; independent-process low-level faults, production admission/backoff and
-recovery policy, hard outages and hot reload during faults still require separate
+recovery policy, hard outages and active-connection reload still require separate
 qualification.
+
+An opt-in Windows Debug [network/reload test]({{ site.docs_url }}/egp/hot_reload.html#native-sessions-after-a-clock-fault)
+also preserves native sessions across C++/C# reload after both sessions stop,
+then verifies explicit fresh-token recovery. Active-connection reload under
+impairment, arbitrary managed facade/event closure persistence and exported-runtime
+reload require separate qualification.
 
 </div>
