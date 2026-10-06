@@ -7,6 +7,7 @@ baseurl: "/EGP-website"
 docs_url: "https://zsg-studios.github.io/EGP-docs"
 engine_url: "https://github.com/ZSG-Studios/EGP"
 plugins_dir: egp_plugins
+plugins: []
 data_dir: egp_data
 collections: {}
 pagination:
