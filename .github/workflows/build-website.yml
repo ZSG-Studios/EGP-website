@@ -13,6 +13,17 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            _layouts
+            _sass
+            assets/css
+            assets/fonts
+            assets/icons
+            egp_pages
+            egp_plugins
+            egp_data
+            tools
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '4.0'
