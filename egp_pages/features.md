@@ -21,7 +21,7 @@ The fork replaces selected systems and adds native development tools.
 | C++ extensions | Editor scaffolding, CMake builds, source diagnostics, embedded SDK and export library publication. | [C++ tools]({{ site.docs_url }}/egp/cpp_extensions.html) |
 | Runtime reload | Opted-in editor-run C#/C++ reload with compatible state retention and explicit repair/restart paths. | [Hot reload]({{ site.docs_url }}/egp/hot_reload.html) |
 | FASTBuild | Local or distributed Windows x64 MSVC compilation, with SCons owning generation and linking. | [Builds]({{ site.docs_url }}/egp/fastbuild.html) |
-| Network lab | Bounded dedicated/listen-host fixtures with clients, impairment, reconnect, server replacement and repeated stalls. | [Network lab]({{ site.docs_url }}/egp/network_lab.html) |
+| Network lab | Bounded dedicated/listen-host fixtures with clients, impairment, reconnect, repeated client stalls, same-process server recovery and checkpoint-based server replacement. | [Network lab]({{ site.docs_url }}/egp/network_lab.html) |
 
 ## Compatibility and support
 
