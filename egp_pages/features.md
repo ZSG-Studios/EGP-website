@@ -69,7 +69,16 @@ through `DetachForReload()` and `ResumeAfterReload(Dictionary)`. Applications
 transfer a local capsule in serialization hooks and resubscribe their event
 handlers. Live and stopped reload fixtures verify ownership, invalid/copied
 claims and constant native signal connection counts. Fresh editor/Debug/Release
-language runs validate the updated helpers. High-level wrapper ownership and
+language runs validate the updated helpers. This capsule transfers low-level
+ownership; high-level C++/physics adapter ownership and
 arbitrary captured closures require separate qualification.
+
+High-level C# [NetNode reload]({{ site.docs_url }}/egp/hot_reload.html#high-level-c-node-reload)
+now preserves forwarding on the same codec child during serialization. Owners
+resubscribe ordinary application events, use named Godot message handlers and
+call base from derived serialization overrides. Live/stopped fixtures verify
+messages, owned inputs, raw packets and all eleven forwarding connections.
+Tree exit/reentry and freed codec replacement are checked; traffic after reentry
+and assembly/unload/ABI failures during authenticated node traffic remain open.
 
 </div>
