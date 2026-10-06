@@ -43,6 +43,11 @@ Use the inherited Godot compilation workflow and EGP's exact-API editor build
 script. Confirm the intended platform and feature set against the
 [qualification record]({{ site.docs_url }}/egp/qualification.html).
 
+Physics currently requires a single-precision x86_64 or arm64 desktop build.
+Android, iOS, Web and double-precision exports omit physics explicitly; games
+requiring physics need a supported desktop build. Android and double-precision
+editors are currently unsupported.
+
 ## Make a game
 
 Read [getting started]({{ site.docs_url }}/egp/getting_started.html), install
