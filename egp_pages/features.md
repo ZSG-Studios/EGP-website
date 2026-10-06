@@ -78,7 +78,17 @@ now preserves forwarding on the same codec child during serialization. Owners
 resubscribe ordinary application events, use named Godot message handlers and
 call base from derived serialization overrides. Live/stopped fixtures verify
 messages, owned inputs, raw packets and all eleven forwarding connections.
-Tree exit/reentry and freed codec replacement are checked; traffic after reentry
-and assembly/unload/ABI failures during authenticated node traffic remain open.
+Tree exit/reentry and freed codec replacement are checked. Current fixtures each
+verify three fresh-session traffic cycles after reentry. Assembly/unload/ABI
+failures during authenticated node traffic remain open.
+
+The shared [codec lifetime contract]({{ site.docs_url }}/egp/hot_reload.html#native-session-lifetime-and-reentry)
+retains callbacks/session on Stop and disconnects all seven native callbacks on
+Close. Fresh-session tests verify retired callback isolation, exact ownership
+traffic and specific close/stop state-callback replacements. Reconfigure custom
+options before new host/join, and keep saved handles tied to their issuing native
+session; numeric IDs can repeat in a new session. Local stale-signal injection is
+a lifetime test; remote-attack and WAN behavior require separate qualification.
+Arbitrary in-flight mutation and performance remain open.
 
 </div>
