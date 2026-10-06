@@ -48,6 +48,11 @@ Android, iOS, Web and double-precision exports omit physics explicitly; games
 requiring physics need a supported desktop build. Android and double-precision
 editors are currently unsupported.
 
+CI retains unit tests in the double-precision template. SCU and GCC sanitizer
+checks run on a supported single-precision desktop editor; the regression
+project runs on the Clang sanitizer editor. Consult each completed workflow's
+source revision and results before relying on a build.
+
 ## Make a game
 
 Read [getting started]({{ site.docs_url }}/egp/getting_started.html), install
