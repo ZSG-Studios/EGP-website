@@ -34,4 +34,10 @@ Production account authentication, token delivery and persistence belong to the
 game/backend. Consult [support and qualification]({{ site.docs_url }}/egp/qualification.html)
 for the documented scope.
 
+Windows C#/C++ fixtures also cover repeated local session recovery and trusted
+Box3D checkpoint restoration. The editor and relocated Debug/Release runs each
+pass 93 interoperability assertions. See [language testing]({{ site.docs_url }}/egp/language_testing.html)
+for the exact scope; client reconnect and hot reload during these faults still
+require separate qualification.
+
 </div>
