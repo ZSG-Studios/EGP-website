@@ -116,8 +116,10 @@ capsules stored in extension-node properties. Applications pause manual polling
 at a safe boundary, transfer their owners and resubscribe callbacks after reload.
 Two actual compatible Debug DLL reloads retain native sessions, adapter/world
 identities and body mapping, with 60 capsule checks and 138 runtime assertions.
-Fresh editor/Debug/Release language regressions also pass. Automatic/in-flight
-transfer, failed-library ownership recovery and exported-game reload require
-separate qualification.
+Fresh editor/Debug/Release language regressions also pass. A separate short
+missing/invalid-DLL recovery fixture passes four failed loads and two compatible
+repairs with 158 runtime assertions; observed fault intervals were 25 ms and
+14 ms with polling paused. Automatic/in-flight transfer, prolonged faults and
+exported-game reload require separate qualification.
 
 </div>
