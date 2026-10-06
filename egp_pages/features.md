@@ -25,6 +25,15 @@ The fork replaces selected systems and adds native development tools.
 
 ## Compatibility and support
 
+The published source includes official Godot changes through
+[`3ea0cf3e7269`](https://github.com/godotengine/godot/commit/3ea0cf3e72699c5e3b35f7956670ac93b9d1d4a0).
+The Windows regression gate repeats language, physics, reload, networking and
+admission checks. Inherited GDScript/C# scene references now survive unmodified
+binary export, with 108 reference assertions across editor and relocated
+Debug/Release games. Separate checks retain export-plugin changes. Read the
+[source and artifact qualification]({{ site.docs_url }}/egp/qualification.html#published-upstream-consolidation)
+for the compiled revisions, zstd guard validation and remaining coverage.
+
 Godot's scene multiplayer/RPC APIs and the Godot/Jolt native physics backends
 are removed. Existing projects should follow the [migration guide]({{ site.docs_url }}/egp/migration.html).
 
