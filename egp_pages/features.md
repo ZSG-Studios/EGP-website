@@ -16,6 +16,8 @@ The fork replaces selected systems and adds native development tools.
 | 2D physics | Box2D is the sole native backend behind PhysicsServer2D and ordinary physics nodes. | [Box2D]({{ site.docs_url }}/egp/box2d.html) |
 | 3D physics | Box3D is the sole native backend; explicit worlds provide stable IDs, ordered commands, trusted local snapshots and network entity-to-body mapping. | [Box3D worlds]({{ site.docs_url }}/egp/explicit_world.html) |
 | Networking | Yojimbo supplies encrypted admission, raw channels and bounded server-authoritative replication. | [Networking]({{ site.docs_url }}/egp/networking.html) |
+| Superposition | Select gameplay properties in the Inspector; configure quantization, relevance, priorities and update budgets through the native replication system. | [Superposition]({{ site.docs_url }}/egp/superposition.html) |
+| Motion presentation | Native buffered snapshot interpolation separates rendered poses from authoritative fixed-step physics. | [Physics arena]({{ site.docs_url }}/egp/physics_arena.html) |
 | Language helpers | GDScript, C# and C++ facades share validated message and state encoding, ownership, interest and scene factories, with public declarations and three-language usage examples. | [Helper API]({{ site.docs_url }}/egp/helper_reference.html) |
 | Prediction | Game-provided capture/restore/simulate callbacks support bounded local history, correction and replay. | [Prediction]({{ site.docs_url }}/egp/prediction.html) |
 | C++ extensions | Editor scaffolding, CMake builds, source diagnostics, embedded SDK and export library publication. | [C++ tools]({{ site.docs_url }}/egp/cpp_extensions.html) |
@@ -26,7 +28,7 @@ The fork replaces selected systems and adds native development tools.
 ## Compatibility and support
 
 The published source includes official Godot changes through
-[`3ea0cf3e7269`](https://github.com/godotengine/godot/commit/3ea0cf3e72699c5e3b35f7956670ac93b9d1d4a0).
+[`b6a3291ea8`](https://github.com/godotengine/godot/commit/b6a3291ea8).
 The Windows regression gate repeats language, physics, reload, networking and
 admission checks. Inherited GDScript/C# scene references now survive unmodified
 binary export, with 108 reference assertions across editor and relocated
