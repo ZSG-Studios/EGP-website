@@ -28,7 +28,7 @@ The fork replaces selected systems and adds native development tools.
 ## Compatibility and support
 
 The published source includes official Godot changes through
-[`b6a3291ea8`](https://github.com/godotengine/godot/commit/b6a3291ea8).
+[`e7b12e7492`](https://github.com/godotengine/godot/commit/e7b12e749220a75ef87e800e080bd2732ad46854).
 The Windows regression gate repeats language, physics, reload, networking and
 admission checks. Inherited GDScript/C# scene references now survive unmodified
 binary export, with 108 reference assertions across editor and relocated
