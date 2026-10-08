@@ -8,11 +8,12 @@ description: "EGP's physics, networking, native extension and build systems, wit
 
 # Familiar workflows, focused integrations
 
-EGP retains Godot's editor, scene system, rendering and scripting foundations.
-The fork replaces selected systems and adds native development tools.
+EGP retains Godot's editor, scene system and scripting foundations.
+Rendered projects use Forward+, and the fork adds native development tools.
 
 | System | EGP integration | Guide |
 | --- | --- | --- |
+| Rendering | Forward+ through Vulkan, Direct3D 12 or Metal where supported; a dummy backend serves headless tools and servers. | [Rendering]({{ site.docs_url }}/tutorials/rendering/renderers.html) |
 | 2D physics | Box2D is the sole native backend behind PhysicsServer2D and ordinary physics nodes. | [Box2D]({{ site.docs_url }}/egp/box2d.html) |
 | 3D physics | Box3D is the sole native backend; explicit worlds provide stable IDs, ordered commands, trusted local snapshots and network entity-to-body mapping. | [Box3D worlds]({{ site.docs_url }}/egp/explicit_world.html) |
 | Networking | Yojimbo supplies encrypted admission, raw channels and bounded server-authoritative replication. | [Networking]({{ site.docs_url }}/egp/networking.html) |
@@ -27,7 +28,17 @@ The fork replaces selected systems and adds native development tools.
 
 ## Compatibility and support
 
-The published source includes official Godot changes through
+Rendered projects need a supported RenderingDevice driver. Compatibility,
+Mobile, OpenGL/OpenGL ES and ANGLE backends are removed; there is no fallback
+renderer. Browser rendering, Web exports and WebXR are unsupported. visionOS
+supports the Window role with Forward+ and Metal; Immersive is unsupported.
+Current renderer build and runtime qualification is recorded in the
+[support guide]({{ site.docs_url }}/egp/qualification.html).
+
+The results below describe earlier integrations and their recorded artifacts.
+They do not qualify the changed renderer.
+
+The earlier published consolidation included official Godot changes through
 [`e7b12e7492`](https://github.com/godotengine/godot/commit/e7b12e749220a75ef87e800e080bd2732ad46854).
 The Windows regression gate repeats language, physics, reload, networking and
 admission checks. Inherited GDScript/C# scene references now survive unmodified
