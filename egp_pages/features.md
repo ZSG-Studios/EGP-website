@@ -16,13 +16,13 @@ The fork replaces selected systems and adds native development tools.
 | 2D physics | Box2D is the sole native backend behind PhysicsServer2D and ordinary physics nodes. | [Box2D]({{ site.docs_url }}/egp/box2d.html) |
 | 3D physics | Box3D is the sole native backend; explicit worlds provide stable IDs, ordered commands, trusted local snapshots and network entity-to-body mapping. | [Box3D worlds]({{ site.docs_url }}/egp/explicit_world.html) |
 | Networking | Yojimbo supplies encrypted admission, raw channels and bounded server-authoritative replication. | [Networking]({{ site.docs_url }}/egp/networking.html) |
-| Superposition | Select gameplay properties in the Inspector; configure quantization, relevance, priorities and update budgets through the native replication system. | [Superposition]({{ site.docs_url }}/egp/superposition.html) |
+| Superposition | Inspector session setup, allowlisted scene spawning, selected property replication, acknowledged deltas and typed RPC with authenticated ownership, relevance and update budgets. | [Superposition]({{ site.docs_url }}/egp/superposition.html) |
 | Motion presentation | Native buffered snapshot interpolation separates rendered poses from authoritative fixed-step physics. | [Physics arena]({{ site.docs_url }}/egp/physics_arena.html) |
 | Language helpers | GDScript, C# and C++ facades share validated message and state encoding, ownership, interest and scene factories, with public declarations and three-language usage examples. | [Helper API]({{ site.docs_url }}/egp/helper_reference.html) |
-| Prediction | Game-provided capture/restore/simulate callbacks support bounded local history, correction and replay. | [Prediction]({{ site.docs_url }}/egp/prediction.html) |
-| C++ extensions | Editor scaffolding, CMake builds, source diagnostics, embedded SDK and export library publication. | [C++ tools]({{ site.docs_url }}/egp/cpp_extensions.html) |
+| Prediction | Native complete-world canonical-input reconciliation and an Inspector Box3D adapter support bounded local history, hash verification and replay; games supply matching genesis and authorized complete inputs. | [Prediction]({{ site.docs_url }}/egp/prediction.html) |
+| C++ extensions | Editor scaffolding, native xmake builds, source diagnostics, embedded SDK and export library publication. | [C++ tools]({{ site.docs_url }}/egp/cpp_extensions.html) |
 | Runtime reload | Opted-in editor-run C#/C++ reload with compatible state retention and explicit repair/restart paths. | [Hot reload]({{ site.docs_url }}/egp/hot_reload.html) |
-| FASTBuild | Local or distributed Windows x64 MSVC compilation, with SCons owning generation and linking. | [Builds]({{ site.docs_url }}/egp/fastbuild.html) |
+| Native builds | Lua generation and native xmake compilation, linking, exact-API SDK packaging and isolated variant caches. | [Builds]({{ site.docs_url }}/egp/xmake.html) |
 | Network lab | Bounded dedicated/listen-host fixtures cover reconnect, impairment and server recovery, with opt-in local Box3D checkpoint restoration, replay and stable body mapping. | [Network lab]({{ site.docs_url }}/egp/network_lab.html) |
 
 ## Compatibility and support

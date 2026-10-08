@@ -18,17 +18,18 @@ Install Visual Studio's C++ desktop workload, the Windows SDK and the .NET SDK.
 Run from PowerShell:
 
 ```powershell
-git clone --recurse-submodules https://github.com/ZSG-Studios/EGP.git
+git clone https://github.com/ZSG-Studios/EGP.git
 cd EGP
 .\misc\scripts\build_egp.ps1 -Setup
-.\misc\scripts\build_egp.ps1 -Local -Target editor
-.\misc\scripts\build_egp.ps1 -Local -Target template_debug
-.\misc\scripts\build_egp.ps1 -Local -Target template_release
+.\misc\scripts\build_egp.ps1 -Target editor
+.\misc\scripts\build_egp.ps1 -Target template_debug
+.\misc\scripts\build_egp.ps1 -Target template_release
 ```
 
 The launcher embeds the editor's actual extension API and builds managed
-assemblies. Distributed compilation is available with a configured FASTBuild
-worker; read the [FASTBuild guide]({{ site.docs_url }}/egp/fastbuild.html).
+assemblies using the native xmake graph and .NET CLI. Read the
+[xmake build guide]({{ site.docs_url }}/egp/xmake.html) for configurations and
+matching editor, template and SDK artifacts.
 
 ## Published artifacts
 
@@ -39,8 +40,8 @@ downloads do not include EGP's replacements.
 
 ## Other desktop platforms
 
-Use the inherited Godot compilation workflow and EGP's exact-API editor build
-script. Confirm the intended platform and feature set against the
+Use EGP's native xmake graph and the platform toolchain described in the
+[xmake build guide]({{ site.docs_url }}/egp/xmake.html). Confirm the intended platform and feature set against the
 [qualification record]({{ site.docs_url }}/egp/qualification.html).
 
 Physics currently requires a single-precision x86_64 or arm64 desktop build.
