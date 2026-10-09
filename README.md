@@ -1,6 +1,6 @@
 # EGP website
 
-The project website for [EGP](https://github.com/ZSG-Studios/EGP), maintained by
+The project website for [EGP](https://github.com/ZSG-Studios/EGP-Engine), maintained by
 ZSG-Studios and forked from [Godot's website](https://github.com/godotengine/godot-website).
 It uses the upstream Jekyll/Sass styles, Montserrat assets and layout conventions.
 The active pages describe EGP's implemented systems and link to the matching

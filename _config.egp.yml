@@ -5,11 +5,12 @@ description: "A Godot Engine fork with Box2D, Box3D, Superpos and built-in C++ t
 url: "https://zsg-studios.github.io"
 baseurl: "/EGP-website"
 docs_url: "https://zsg-studios.github.io/EGP-docs"
-engine_url: "https://github.com/ZSG-Studios/EGP"
+engine_url: "https://github.com/ZSG-Studios/EGP-Engine"
 plugins_dir: egp_plugins
 plugins: []
 data_dir: egp_data
-collections: {}
+# Replace the upstream collection map instead of deep-merging it.
+collections: []
 pagination:
   enabled: false
 include: ["egp_pages"]
