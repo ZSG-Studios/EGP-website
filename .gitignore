@@ -3,6 +3,7 @@
 .jekyll-cache
 .jekyll-metadata
 _site
+_build/
 vendor/
 
 # Code editors
