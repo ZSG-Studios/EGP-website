@@ -1,7 +1,7 @@
 # EGP is the active site. Upstream editorial, release and download content remains
 # in Git history/source for maintenance but is excluded from the public build.
 title: EGP
-description: "A Godot Engine fork with Box2D, Box3D, Yojimbo and built-in C++ tools."
+description: "A Godot Engine fork with Box2D, Box3D, Superpos and built-in C++ tools."
 url: "https://zsg-studios.github.io"
 baseurl: "/EGP-website"
 docs_url: "https://zsg-studios.github.io/EGP-docs"
