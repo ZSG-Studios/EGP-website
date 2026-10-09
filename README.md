@@ -8,6 +8,10 @@ The active pages describe EGP's implemented systems and link to the matching
 
 ## Build
 
+The maintained EGP workspace temporarily requires all build stages to run on
+the remote build PC. Run Jekyll there and reuse the canonical `_site` output.
+Local source editing and checks that do not build remain permitted.
+
 Install Ruby 4.0 and Bundler, then run:
 
 ```sh
