@@ -1,0 +1,53 @@
+name: CI
+# Builds the website on EGP self-hosted runners. This repository is public, so only pushes
+# and manual runs trigger it: untrusted code never runs on the hosts.
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build site
+    runs-on: [self-hosted, egp-linux]
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: |
+            _layouts
+            _sass
+            assets/css
+            assets/fonts
+            assets/icons
+            egp_pages
+            egp_plugins
+            egp_data
+            tools
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@e81a8fa391b11a595c1b7ed84177cc0fe02faf83 # v1.328.0
+        with:
+          ruby-version: '4.0'
+          bundler-cache: true
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --config _config.yml,_config.egp.yml --strict_front_matter
+
+      - name: Check local links, assets and branding
+        run: python3 tools/check_site.py
+
+      - name: Upload site
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: egp-website-html
+          path: _site
+          retention-days: 14
